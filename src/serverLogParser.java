@@ -12,9 +12,8 @@ public class serverLogParser {
         //Regular expression pattern that matches the event where a player joins the server. This also groups that player.
         Pattern patternPlayer = Pattern.compile("Nickname of \\d+@steam is now \\b(\\w+(?:[-\\s']\\w+)*)\\b.");
         //Regular expression pattern that matches the event where a player kills another player. This also groups the victim name and class, and killer name and class.
-        // (.*\\b(\\w+(?:-|\\s+\\w+)*) \\(\\d+@steam\\), playing as (\\w+(?:-|\\s+\\w+)*) has been killed by (\\w+(?:-|\\s+\\w+)*) \\(\\d+@steam\\) playing as: (\\w+(?:-|\\s+\\w+)*). Specific death reason:.*)
         Pattern patternKill = Pattern.compile("\\b(\\w+(?:[-\\s']\\w+)*)\\b \\(\\d+@steam\\), playing as \\b(\\w+(?:[-\\s']\\w+)*)\\b, has been killed by \\b(\\w+(?:[-\\s']\\w+)*)\\b \\(\\d+@steam\\) playing as: \\b(\\w+(?:[-\\s']\\w+)*)\\b. Specific death reason:.*");
-        //Regular expression pattern that matches the event where a player suicides. This also groups that players name and class.  \b(\w+(?:[-\s]*\w+)*)
+        //Regular expression pattern that matches the event where a player suicides. This also groups that players name and class.
         Pattern patternSuicide = Pattern.compile("\\b(\\w+(?:[-\\s']\\w+)*)\\b \\(\\d+@steam\\), playing as \\b(\\w+(?:[-\\s']\\w+)*)\\b, has died. Specific death reason:.*");
         //Paths to the directory that has the server logs
         File logDR = new File("C:\\Users\\jason\\AppData\\Roaming\\SCP Secret Laboratory\\ServerLogs\\7777");
