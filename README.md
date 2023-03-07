@@ -10,6 +10,7 @@ db.url=
 
 add the above text and fill in your username, password, and JDBC connection string.
 The DBconn class will take over from there.
+You'll also have to change the logDR path. in my case its, "C:\Users\jason\AppData\Roaming\SCP Secret Laboratory\ServerLogs\7777" but this will probably be different in your case.
 
 
 This is my first project so thanks for taking a look at it!
